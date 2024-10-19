@@ -3,9 +3,23 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
+import { AuthContext } from "../../ContextWrapper";
 
 const Navigation = () => {
+  const { userData, setUserData } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    console.log(userData);
+  }, [userData]);
+
+  const logout = () => {
+    setUserData(undefined);
+    navigate("/");
+  };
+
   return (
     <AppBar position="static">
       <Toolbar>
@@ -25,12 +39,25 @@ const Navigation = () => {
             </Button>
           </Box>
         </Typography>
-        <Button component={Link} to="/login" color="inherit">
-          Login
-        </Button>
-        <Button component={Link} to="/logout" color="inherit">
-          Logout
-        </Button>
+        {userData ? (
+          <React.Fragment>
+            <Typography
+              color="textPrimary"
+              variant="overline"
+              component="div"
+              fontStyle="italic"
+            >
+              logged in as: {userData.username}
+            </Typography>
+            <Button color="inherit" onClick={logout}>
+              Logout
+            </Button>
+          </React.Fragment>
+        ) : (
+          <Button component={Link} to="/login" color="inherit">
+            Login
+          </Button>
+        )}
       </Toolbar>
     </AppBar>
   );
