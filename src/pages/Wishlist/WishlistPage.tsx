@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../ContextWrapper";
+import Wishlist from "../../components/Wishlist/WishlistProduct";
 
 const WishlistPage = () => {
   const { userData, setUserData } = useContext(AuthContext);
@@ -11,7 +12,7 @@ const WishlistPage = () => {
       navigate("/");
     }
   }, [userData, navigate]);
-  return <div>WishlistPage</div>;
+  return <Wishlist/>;
 };
 
 export default WishlistPage;
