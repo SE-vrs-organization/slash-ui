@@ -65,10 +65,10 @@ const SearchProducts: React.FC = () => {
   //Adding the selected items into the wishlist
   const addToWishlist = async (item: Product) => {
     try {
-      const response = await axios.post(
-        `http://127.0.0.1:5000/api/wishlist`,
-        item
-      );
+      const response = await axios.post(`http://127.0.0.1:5000/api/wishlist`, {
+        item,
+        username: userData?.username,
+      });
       if (response.status === 200) {
         alert("Item added to wishlist successfully!");
       }
