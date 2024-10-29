@@ -54,9 +54,14 @@ const Navigation = () => {
             </Button>
           </React.Fragment>
         ) : (
-          <Button component={Link} to="/login" color="inherit">
-            Login
-          </Button>
+          <React.Fragment>
+            <Button component={Link} to="/login" color="inherit">
+              Login
+            </Button>
+            <Button component={Link} to="/register" color="inherit">
+              Register
+            </Button>
+          </React.Fragment>
         )}
       </Toolbar>
     </AppBar>

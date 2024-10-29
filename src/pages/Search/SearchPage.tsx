@@ -12,7 +12,7 @@ const SearchPage = () => {
       navigate("/");
     }
   }, [userData, navigate]);
-  
+
   return <SearchPg />;
 };
 

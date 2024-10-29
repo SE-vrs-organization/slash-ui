@@ -4,6 +4,7 @@ import LoginPage from "./pages/Login/LoginPage";
 import PostPage from "./pages/Post/PostPage";
 import SearchPage from "./pages/Search/SearchPage";
 import WishlistPage from "./pages/Wishlist/WishlistPage";
+import RegisterPage from "./pages/Register/RegisterPage";
 
 const SlashRouter = () => {
   return (
@@ -13,6 +14,7 @@ const SlashRouter = () => {
       <Route path="/wishlist" element={<WishlistPage />} />
       <Route path="/sell" element={<PostPage />} />
       <Route path="/search" element={<SearchPage />} />
+      <Route path="/register" element={<RegisterPage />} />
     </Routes>
   );
 };
