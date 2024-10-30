@@ -31,6 +31,7 @@ const Wishlist: React.FC = () => {
   const { userData } = useContext(AuthContext);
   const [error, setError] = useState("");
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const fetchWishlist = async () => {
     try {
       const response = await axios.get(
