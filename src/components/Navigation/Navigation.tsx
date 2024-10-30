@@ -25,16 +25,36 @@ const Navigation = () => {
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           <Box sx={{ display: "flex", gap: 2 }}>
-            <Button component={Link} to="/" color="inherit">
+            <Button
+              component={Link}
+              to="/"
+              color="inherit"
+              data-testid="home-button"
+            >
               Home
             </Button>
-            <Button component={Link} to="/search" color="inherit">
+            <Button
+              component={Link}
+              to="/search"
+              color="inherit"
+              data-testid="search-button"
+            >
               Search
             </Button>
-            <Button component={Link} to="/wishlist" color="inherit">
+            <Button
+              component={Link}
+              to="/wishlist"
+              color="inherit"
+              data-testid="wishlist-button"
+            >
               Wishlist
             </Button>
-            <Button component={Link} to="/sell" color="inherit">
+            <Button
+              component={Link}
+              to="/sell"
+              color="inherit"
+              data-testid="sell-button"
+            >
               Sell
             </Button>
           </Box>

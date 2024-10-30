@@ -46,6 +46,7 @@ const AddPosting = ({
         onChange={handleChange}
         fullWidth
         margin="normal"
+        data-testid="name-input"
       />
       <TextField
         label="Description"
@@ -54,6 +55,7 @@ const AddPosting = ({
         onChange={handleChange}
         fullWidth
         margin="normal"
+        data-testid="description-input"
       />
       <TextField
         label="Price"
@@ -63,6 +65,7 @@ const AddPosting = ({
         fullWidth
         margin="normal"
         type="number"
+        data-testid="price-input"
       />
       <TextField
         select
@@ -72,12 +75,24 @@ const AddPosting = ({
         onChange={handleChange}
         fullWidth
         margin="normal"
+        data-testid="currency-input"
       >
-        <MenuItem value="USD">USD</MenuItem>
-        <MenuItem value="EUR">EUR</MenuItem>
-        <MenuItem value="GBP">GBP</MenuItem>
+        <MenuItem data-testid="currency-USD" value="USD">
+          USD
+        </MenuItem>
+        <MenuItem data-testid="currency-EUR" value="EUR">
+          EUR
+        </MenuItem>
+        <MenuItem data-testid="currency-GBP" value="GBP">
+          GBP
+        </MenuItem>
       </TextField>
-      <Button type="submit" variant="contained" color="primary">
+      <Button
+        data-testid="submit-button"
+        type="submit"
+        variant="contained"
+        color="primary"
+      >
         Submit
       </Button>
     </form>
