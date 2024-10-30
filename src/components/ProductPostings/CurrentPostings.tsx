@@ -26,7 +26,7 @@ type ProductPosting = {
 
 const CurrentPostings = () => {
   const [postings, setPostings] = useState<ProductPosting[]>([]);
-  const { userData, setUserData } = useContext(AuthContext);
+  const { userData } = useContext(AuthContext);
   const [showAddProduct, setShowAddProduct] = useState(false);
 
   useEffect(() => {
@@ -34,6 +34,7 @@ const CurrentPostings = () => {
       return;
     }
     getPostings();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userData]);
 
   const getPostings = () => {

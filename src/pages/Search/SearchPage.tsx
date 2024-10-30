@@ -1,10 +1,10 @@
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import SearchPg from "../../components/SearchPage/SearchProduct";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../ContextWrapper";
 
 const SearchPage = () => {
-  const { userData, setUserData } = useContext(AuthContext);
+  const { userData } = useContext(AuthContext);
   const navigate = useNavigate();
 
   useEffect(() => {

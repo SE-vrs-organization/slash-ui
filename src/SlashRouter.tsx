@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/Landing/LandingPage";
 import LoginPage from "./pages/Login/LoginPage";

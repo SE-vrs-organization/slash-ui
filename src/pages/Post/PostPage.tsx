@@ -1,10 +1,10 @@
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import CurrentPostings from "../../components/ProductPostings/CurrentPostings";
 import { AuthContext } from "../../ContextWrapper";
 import { useNavigate } from "react-router-dom";
 
 const PostPage = () => {
-  const { userData, setUserData } = useContext(AuthContext);
+  const { userData } = useContext(AuthContext);
   const navigate = useNavigate();
 
   useEffect(() => {

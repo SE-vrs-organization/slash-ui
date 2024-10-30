@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import axios from "axios";
 import { AuthContext } from "../../ContextWrapper";
 import "./style.css";
@@ -16,7 +16,6 @@ import {
   ListItemAvatar,
   Avatar,
   ListItemText,
-  Container,
 } from "@mui/material";
 import { Link } from "react-router-dom";
 
@@ -29,7 +28,7 @@ interface Product {
 }
 
 const SearchProducts: React.FC = () => {
-  const { userData, setUserData } = useContext(AuthContext);
+  const { userData } = useContext(AuthContext);
 
   const [product, setProduct] = useState("");
   const [currency, setCurrency] = useState("USD($)");

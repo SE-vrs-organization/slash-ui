@@ -28,7 +28,7 @@ interface WishlistItem {
 
 const Wishlist: React.FC = () => {
   const [wishlist, setWishlist] = useState<WishlistItem[]>([]);
-  const { userData, setUserData } = useContext(AuthContext);
+  const { userData } = useContext(AuthContext);
   const [error, setError] = useState("");
 
   const fetchWishlist = async () => {
@@ -60,7 +60,7 @@ const Wishlist: React.FC = () => {
 
   useEffect(() => {
     fetchWishlist();
-  }, []);
+  }, [fetchWishlist]);
 
   return (
     <Container className="wishlist-container">

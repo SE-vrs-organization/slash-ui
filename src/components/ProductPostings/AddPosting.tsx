@@ -15,7 +15,7 @@ const AddPosting = ({
     currency: "",
   });
 
-  const { userData, setUserData } = useContext(AuthContext);
+  const { userData } = useContext(AuthContext);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;

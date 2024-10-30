@@ -4,7 +4,7 @@ import { AuthContext } from "../../ContextWrapper";
 import Wishlist from "../../components/Wishlist/WishlistProduct";
 
 const WishlistPage = () => {
-  const { userData, setUserData } = useContext(AuthContext);
+  const { userData } = useContext(AuthContext);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -12,7 +12,7 @@ const WishlistPage = () => {
       navigate("/");
     }
   }, [userData, navigate]);
-  return <Wishlist/>;
+  return <Wishlist />;
 };
 
 export default WishlistPage;

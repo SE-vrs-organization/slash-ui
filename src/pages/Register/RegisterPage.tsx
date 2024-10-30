@@ -20,7 +20,7 @@ const RegisterPage: React.FC = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const { userData, setUserData } = useContext(AuthContext);
+  const { setUserData } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleRegister = (e: React.FormEvent) => {
