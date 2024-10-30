@@ -56,6 +56,7 @@ const LoginPage = () => {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
+          data-testid="username-input"
         />
         <TextField
           label="Password"
@@ -65,9 +66,11 @@ const LoginPage = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
+          data-testid="password-input"
         />
         <Button
           variant="contained"
+          data-testid="login-button"
           color="primary"
           type="submit"
           style={{ marginTop: "16px" }}

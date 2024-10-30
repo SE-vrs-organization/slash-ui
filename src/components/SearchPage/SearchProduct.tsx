@@ -86,6 +86,7 @@ const SearchProducts: React.FC = () => {
         value={product}
         onChange={(e) => setProduct(e.target.value)}
         required
+        data-testid="product-input"
       />
       <FormControl variant="outlined">
         <InputLabel>Currency</InputLabel>
@@ -93,6 +94,7 @@ const SearchProducts: React.FC = () => {
           value={currency}
           onChange={(e) => setCurrency(e.target.value)}
           label="Currency"
+          data-testid="currency-input"
         >
           <MenuItem value="USD($)">USD($)</MenuItem>
           <MenuItem value="EUR(€)">EUR(€)</MenuItem>
@@ -109,6 +111,7 @@ const SearchProducts: React.FC = () => {
         variant="outlined"
         value={minPrice}
         onChange={(e) => setMinPrice(Number(e.target.value))}
+        data-testid="minprice-input"
       />
       <TextField
         type="number"
@@ -116,8 +119,14 @@ const SearchProducts: React.FC = () => {
         variant="outlined"
         value={maxPrice}
         onChange={(e) => setMaxPrice(Number(e.target.value))}
+        data-testid="maxprice-input"
       />
-      <Button variant="contained" color="primary" onClick={handleSearch}>
+      <Button
+        data-testid="search-button"
+        variant="contained"
+        color="primary"
+        onClick={handleSearch}
+      >
         Search
       </Button>
 

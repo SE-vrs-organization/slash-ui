@@ -70,6 +70,7 @@ const RegisterPage: React.FC = () => {
           sx={{ mt: 1 }}
         >
           <TextField
+            data-testid="username"
             margin="normal"
             required
             fullWidth
@@ -82,6 +83,7 @@ const RegisterPage: React.FC = () => {
             onChange={(e) => setUsername(e.target.value)}
           />
           <TextField
+            data-testid="firstName"
             margin="normal"
             required
             fullWidth
@@ -93,6 +95,7 @@ const RegisterPage: React.FC = () => {
             onChange={(e) => setFirstName(e.target.value)}
           />
           <TextField
+            data-testid="lastName"
             margin="normal"
             required
             fullWidth
@@ -104,6 +107,7 @@ const RegisterPage: React.FC = () => {
             onChange={(e) => setLastName(e.target.value)}
           />
           <TextField
+            data-testid="email"
             margin="normal"
             required
             fullWidth
@@ -115,6 +119,7 @@ const RegisterPage: React.FC = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
           <TextField
+            data-testid="password"
             margin="normal"
             required
             fullWidth
@@ -127,6 +132,7 @@ const RegisterPage: React.FC = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <TextField
+            data-testid="confirmPassword"
             margin="normal"
             required
             fullWidth
@@ -139,6 +145,7 @@ const RegisterPage: React.FC = () => {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
           <Button
+            data-testid="submit"
             type="submit"
             fullWidth
             variant="contained"
