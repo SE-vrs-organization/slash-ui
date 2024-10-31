@@ -1,3 +1,36 @@
+/**
+ * Navigation component that renders the application's navigation bar.
+ *
+ * This component uses Material-UI's AppBar and Toolbar to create a navigation bar
+ * with links to different routes in the application. It also displays the user's
+ * login status and provides a logout button if the user is logged in.
+ *
+ * @component
+ *
+ * @returns {JSX.Element} The rendered navigation bar component.
+ *
+ * @example
+ * // Usage example:
+ * // <Navigation />
+ *
+ * @remarks
+ * This component uses React Router's `Link` component for navigation and `useNavigate`
+ * for programmatic navigation. It also consumes the `AuthContext` to get the current
+ * user's data and to update the user state on logout.
+ *
+ * @requires {@link https://mui.com/material-ui/react-app-bar/ | @mui/material/AppBar}
+ * @requires {@link https://mui.com/material-ui/react-toolbar/ | @mui/material/Toolbar}
+ * @requires {@link https://mui.com/material-ui/react-typography/ | @mui/material/Typography}
+ * @requires {@link https://mui.com/material-ui/react-button/ | @mui/material/Button}
+ * @requires {@link https://mui.com/material-ui/react-box/ | @mui/material/Box}
+ * @requires {@link https://reactrouter.com/web/guides/quick-start | react-router-dom}
+ * @requires {@link https://reactjs.org/docs/hooks-reference.html#usecontext | React.useContext}
+ * @requires {@link https://reactjs.org/docs/hooks-reference.html#useeffect | React.useEffect}
+ *
+ * @see {@link https://reactrouter.com/web/api/Link | Link}
+ * @see {@link https://reactrouter.com/web/api/Hooks | useNavigate}
+ * @see {@link ../../ContextWrapper | AuthContext}
+ */
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";

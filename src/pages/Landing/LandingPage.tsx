@@ -1,3 +1,18 @@
+/**
+ * LandingPage component
+ *
+ * This component serves as the landing page for the Slash application.
+ * It provides a welcoming message and navigation links to various sections
+ * of the application such as Search, Wishlist, and Sell.
+ *
+ * @component
+ * @example
+ * return (
+ *   <LandingPage />
+ * )
+ *
+ * @returns {JSX.Element} The rendered landing page component.
+ */
 import { Container, Typography, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 

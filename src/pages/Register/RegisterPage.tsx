@@ -1,3 +1,32 @@
+/**
+ * RegisterPage component allows users to create a new account by providing their
+ * username, password, first name, last name, and email address. It validates the
+ * password and confirm password fields to ensure they match before submitting the
+ * registration form to the server.
+ *
+ * @component
+ * @example
+ * return (
+ *   <RegisterPage />
+ * )
+ *
+ * @returns {React.FC} A React functional component that renders the registration form.
+ *
+ * @remarks
+ * This component uses Material-UI for styling and layout. It also uses Axios for
+ * making HTTP requests to the backend server for user registration. Upon successful
+ * registration, the user is redirected to the search page.
+ *
+ * @requires {@link https://www.npmjs.com/package/axios | axios}
+ * @requires {@link https://mui.com/ | @mui/material}
+ * @requires {@link https://reactjs.org/ | React}
+ * @requires {@link https://reactrouter.com/ | react-router-dom}
+ *
+ * @see {@link https://mui.com/components/box/ | Box (Material-UI)}
+ * @see {@link https://mui.com/components/container/ | Container (Material-UI)}
+ * @see {@link https://mui.com/components/text-field/ | TextField (Material-UI)}
+ * @see {@link https://mui.com/components/button/ | Button (Material-UI)}
+ */
 import { LockOutlined } from "@mui/icons-material";
 import {
   Container,

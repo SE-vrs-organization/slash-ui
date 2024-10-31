@@ -1,3 +1,20 @@
+/**
+ * ContextWrapper component provides the AuthContext to its child components.
+ *
+ * This component maintains the user data state and provides it along with a
+ * function to update it through the AuthContext.Provider. It also renders
+ * the Navigation and SlashRouter components.
+ *
+ * @component
+ *
+ * @typedef {Object} UserData
+ * @property {string} username - The username of the user.
+ * @property {string} firstName - The first name of the user.
+ * @property {string} lastName - The last name of the user.
+ * @property {string} email - The email address of the user.
+ *
+ * @returns {JSX.Element} The rendered component.
+ */
 import React from "react";
 import SlashRouter from "./SlashRouter";
 import Navigation from "./components/Navigation/Navigation";

@@ -1,3 +1,37 @@
+/**
+ * SearchProducts component allows users to search for products based on various criteria
+ * such as product name, price range, and currency. It fetches the search results from an API
+ * and displays them in a list. Users can also add products to their wishlist.
+ *
+ * @component
+ * @example
+ * return (
+ *   <SearchProducts />
+ * )
+ *
+ * @returns {JSX.Element} The rendered component.
+ *
+ * @remarks
+ * This component uses the AuthContext to get the user data and axios for making HTTP requests.
+ * It also uses Material-UI components for styling and layout.
+ *
+ * @typedef {Object} Product
+ * @property {string} title - The title of the product.
+ * @property {string} price - The price of the product.
+ * @property {string} link - The link to the product page.
+ * @property {string} website - The website where the product is listed.
+ * @property {string} img_link - The link to the product image.
+ *
+ * @state {string} product - The name of the product to search for.
+ * @state {string} currency - The currency to use for the price range.
+ * @state {number} minPrice - The minimum price for the search.
+ * @state {number} maxPrice - The maximum price for the search.
+ * @state {Product[]} results - The list of search results.
+ * @state {string} error - The error message to display if the search fails.
+ *
+ * @function handleSearch - Fetches the search results from the API based on the search criteria.
+ * @function addToWishlist - Adds a selected product to the user's wishlist.
+ */
 import React, { useState, useContext } from "react";
 import axios from "axios";
 import { AuthContext } from "../../ContextWrapper";

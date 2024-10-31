@@ -1,3 +1,23 @@
+/**
+ * AddPosting component allows users to create a new product posting.
+ *
+ * @component
+ * @param {Object} props - Component props
+ * @param {Function} props.newPostingCallback - Callback function to be called after a new posting is successfully added
+ *
+ * @returns {JSX.Element} The rendered AddPosting component
+ *
+ * @example
+ * <AddPosting newPostingCallback={handleNewPosting} />
+ *
+ * @remarks
+ * This component uses the AuthContext to get the current user's data and axios to send a POST request to the server.
+ * It includes form fields for the product name, description, price, and currency.
+ *
+ * @requires AuthContext - Context to get the current user's data
+ * @requires axios - Library to make HTTP requests
+ * @requires @mui/material - Material-UI components
+ */
 import React, { useContext, useState } from "react";
 import { TextField, Button, MenuItem } from "@mui/material";
 import axios from "axios";

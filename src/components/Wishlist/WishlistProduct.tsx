@@ -1,3 +1,40 @@
+/**
+ * Wishlist component displays a list of products that the user has added to their wishlist.
+ * It fetches the wishlist items from the backend API and allows the user to remove items from the wishlist.
+ *
+ * @component
+ * @example
+ * return (
+ *   <Wishlist />
+ * )
+ *
+ * @returns {JSX.Element} The rendered Wishlist component.
+ *
+ * @remarks
+ * This component uses the `AuthContext` to get the current user's data and fetches the wishlist items
+ * from the backend API using Axios. It also handles the removal of items from the wishlist.
+ *
+ * @typedef {Object} WishlistItem
+ * @property {number} id - The unique identifier of the wishlist item.
+ * @property {string} title - The title of the wishlist item.
+ * @property {string} price - The price of the wishlist item.
+ * @property {string} link - The link to the product page of the wishlist item.
+ * @property {string} website - The website where the wishlist item is listed.
+ * @property {string} img_link - The image link of the wishlist item.
+ *
+ * @state {WishlistItem[]} wishlist - The list of wishlist items.
+ * @state {string} error - The error message to display if fetching or removing items fails.
+ *
+ * @function fetchWishlist - Fetches the wishlist items from the backend API.
+ * @function handleRemove - Removes an item from the wishlist by making a DELETE request to the backend API.
+ *
+ * @requires axios
+ * @requires @mui/material
+ * @requires @mui/icons-material/Delete
+ * @requires react-router-dom
+ * @requires ./style.css
+ * @requires ../../ContextWrapper
+ */
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import "./style.css";

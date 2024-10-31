@@ -1,3 +1,17 @@
+/**
+ * SlashRouter component sets up the routing for the application.
+ * It defines the routes and their corresponding components.
+ *
+ * Routes:
+ * - "/" renders the LandingPage component.
+ * - "/login" renders the LoginPage component.
+ * - "/wishlist" renders the WishlistPage component.
+ * - "/sell" renders the PostPage component.
+ * - "/search" renders the SearchPage component.
+ * - "/register" renders the RegisterPage component.
+ *
+ * @component
+ */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/Landing/LandingPage";
