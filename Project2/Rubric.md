@@ -1,4 +1,4 @@
-# Project 3 Rubric
+# Project 2 Rubric
 
 |Notes|Self Assessment| Evidence|
 |-----|-|---------|
