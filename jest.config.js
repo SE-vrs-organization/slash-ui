@@ -1,4 +1,6 @@
 module.exports = {
+  collectCoverage: true,
+  coverageReporters: ["json", "lcov", "text", "clover"],
   preset: "ts-jest/presets/default-esm", // Support for TypeScript with ES modules
   transform: {
     "^.+\\.tsx?$": "ts-jest",
