@@ -78,7 +78,7 @@ const Navigation = () => {
             <Button component={Link} to="/sell" color="inherit" data-testid="sell-button">
               <MonetizationOnIcon /> Sell
             </Button>
-            <Button component={Link} to="/sell" color="inherit" data-testid="sell-button">
+            <Button component={Link} to="/cart" color="inherit" data-testid="sell-button">
               <ShoppingCartIcon />
               Cart
             </Button>
