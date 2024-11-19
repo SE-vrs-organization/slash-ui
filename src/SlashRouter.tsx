@@ -21,6 +21,7 @@ import SearchPage from "./pages/Search/SearchPage";
 import WishlistPage from "./pages/Wishlist/WishlistPage";
 import RegisterPage from "./pages/Register/RegisterPage";
 import { ShoppingCartPage } from "./pages/ShoppingCart/ShoppingCartPage";
+import OrderPage from "./pages/Order/OrderPage";
 
 const SlashRouter = () => {
   return (
@@ -32,6 +33,7 @@ const SlashRouter = () => {
       <Route path="/search" element={<SearchPage />} />
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/cart" element={<ShoppingCartPage />} />
+      <Route path="/orders" element={<OrderPage />} />
     </Routes>
   );
 };
